@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Graph Mail</title>
+</head>
+<body>
+<main class="w-full h-screen grid grid-cols-2 overflow-hidden">
+
+    <div class="w-full h-screen relative flex items-center justify-center">
+        <div class="w-5/6">
+            <canvas id="myChart" class="w-full"></canvas>
+        </div>
+
+        <div class="absolute bottom-4 left-4 p-2 bg-zinc-100">
+            <ul id="domain-list"></ul>
+        </div>
+    </div>
+
+    <div class="w-full h-screen">
+        <div class="h-16 flex flex-col justify-center">
+            <label for="search" class="font-semibold text-sm">Search</label>
+            <div class="flex space-x-2 pr-4">
+                <input
+                        type="text"
+                        name="search"
+                        id="search"
+                        placeholder="Search for a user"
+                        class="bg-zinc-100 px-2 py-1 w-full rounded-md"
+                >
+
+                <button class="bg-zinc-600 text-white text-sm px-3 rounded-md" id="sort-asc">ASC</button>
+                <button class="bg-zinc-600 text-white text-sm px-3 rounded-md" id="sort-desc">DESC</button>
+            </div>
+        </div>
+
+        <ul id="mail-list" class="h-[calc(100%-4rem)] mt-4 overflow-scroll pb-4"></ul>
+    </div>
+
+</main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="index.js" type="module"></script>
+</html>
